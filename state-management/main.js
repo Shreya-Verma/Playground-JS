@@ -25,9 +25,9 @@
     const proxyState = new Proxy(
       { value: initialState },
       {
-        set(state, key, value) {
-          state[key] = value;
-          console.log(`stateChange: ${key}: ${value}`);
+        set(obj, prop, value) {
+          obj[prop] = value;
+          console.log(`stateChange: ${prop}: ${value}`);
           updateUI();
         },
       }
