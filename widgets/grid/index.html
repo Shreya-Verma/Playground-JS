@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+    <style>
+      .wrapper {
+        display: grid;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+        grid-template-areas:
+          "header header header header header"
+          "side main main main ad"
+          "footer footer footer footer footer";
+        gap: 10px;
+        height: 100vh;
+        border: 5px solid red;
+        justify-items: stretch;
+        align-items: stretch;
+      }
+
+      .item-a {
+        grid-area: header;
+        background-color: aqua;
+      }
+      .item-b {
+        grid-area: side;
+        background-color: magenta;
+      }
+      .item-c {
+        grid-area: main;
+        background-color: seagreen;
+      }
+      .item-d {
+        grid-area: ad;
+        background-color: orange;
+      }
+      .item-e {
+        grid-area: footer;
+        background-color: purple;
+      }
+      .item-f {
+        grid-column: 6 / 7;
+
+        background-color: salmon;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="item-a">HEADER</div>
+      <div class="item-b">SIDEBAR</div>
+      <div class="item-c">MAIN</div>
+      <div class="item-d">ADS</div>
+      <div class="item-e">FOOTER</div>
+      <div class="item-f">DISPLAYING AUTO GRID</div>
+    </div>
+  </body>
+</html>
